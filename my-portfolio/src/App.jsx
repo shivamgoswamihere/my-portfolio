@@ -2,18 +2,15 @@ import React,{useState} from 'react';
 import './App.css';
 import { NavBar } from './sections/NavBar';
 import { Hero } from './sections/Hero';
-import { FeaturedProjects } from './sections/FeaturedProjects';
 import { Certifications } from './sections/Certifications';
-// import { About } from './sections/About';
 import { Projects } from './sections/Projects';
 import { Events } from './sections/Events';
 import { Contact } from './sections/Contact';
-import WelcomeModal from './sections/WelcomeModal';
-import SmoothBackground from './components/SmoothBackground';
+import { Skills } from './sections/Skills';
+// import WelcomeModal from './sections/WelcomeModal';
 import SmoothScroll from './components/SmoothScroll';
 import SpiralGalaxy from './components/SpiralGalaxy';
 import SplineWithLoader from './components/SplineWithLoader';
-// import Spline from '@splinetool/react-spline';
 
 
 
@@ -21,32 +18,42 @@ const App = () => {
     const [userName, setUserName] = useState("");
   return (
 <>
- <WelcomeModal onSaveName={setUserName} />
-<NavBar/>
- <SplineWithLoader username={userName}/>
+ {/* <WelcomeModal onSaveName={setUserName} /> */}
+  <NavBar/>
+  <section id="Home">
+    <SplineWithLoader username={userName}/>
+  </section>
+    {/* <SmoothScroll> */}
 
-{/* <SmoothScroll> */}
-  <SpiralGalaxy username={userName}/>
   {/* <About/> */}
-  <Hero/>
-  <FeaturedProjects/>
-  <Certifications/>
-  <SmoothBackground
-        colors={['#0f0c29',
-      '#302b63',
-      '#24243e',
-      '#1b1a2f',
-      '#3a0ca3',
-      '#000814']}
-        duration={4000}
-      >
-  </SmoothBackground>
-  <Projects/>
-  <Events/>
-  <SmoothBackground colors={[ '#2c003e', '#3a0ca3', '#4361ee', '#2c5364']}>
-    {/* Your portfolio content */}
+  <section id="About">
+    <SpiralGalaxy username={userName}/>
+  </section>
+
+  <section id="Projects">
+    <Projects/>
+  </section>
+  
+  <section id="Education">
+    <Hero/>
+  </section>
+  
+  <section id="Skills">
+      <Skills/>
+  </section>
+  
+  <section id="Events">
+    <Events/>
+  </section>
+
+  <section id="Certifications">
+    <Certifications/>
+  </section>
+  
+  
+  <section id="Contact">
     <Contact/>
-  </SmoothBackground>
+  </section>
 {/* </SmoothScroll> */}
 
 </>

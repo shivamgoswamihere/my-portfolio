@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import logo from "../assets/SG-logo.png";
 
 export const NavBar = () => {
@@ -6,10 +7,10 @@ export const NavBar = () => {
 
   return (
     <nav className="sticky top-0 mx-4 z-50">
-      <div className="flex justify-between items-center shadow-md backdrop-blur-xl bg-white/5 border border-gray-300 p-4 rounded-b-2xl">
+      <div className="flex justify-between items-center shadow-md backdrop-blur-xl bg-white/5 border border-gray-300 p-4 rounded-b-2xl ">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <img src={logo} alt="Logo" className="h-9" />
+          <img src={logo} alt="Logo" className="h-9 " />
         </div>
 
         {/* Hamburger Toggle (mobile only) */}
@@ -47,13 +48,24 @@ export const NavBar = () => {
             isOpen ? "flex" : "hidden"
           }`}
         >
-          {["Home", "About", "Skills", "Projects", "Certifications", "Events", "Contact"].map(
+          {["Home", "About", "Projects", "Education" ,"Skills", "Events", "Certifications", "Contact"].map(
             (item) => (
               <li
                 key={item}
                 className="cursor-pointer hover:text-blue-500 text-[#b6b7bb] md:text-base text-sm"
               >
-                {item}
+                <Link
+                  to={item}
+                  smooth={true}
+                  duration={300}
+                  offset={-60}
+                  spy={true}
+                  activeClass="text-blue-500"
+                  onSetActive={() => setIsOpen(false)} // if you want to auto-close menu on click
+                >{item}
+                </Link>
+
+                
               </li>
             )
           )}
