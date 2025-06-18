@@ -20,10 +20,10 @@ const App = () => {
 <>
  {/* <WelcomeModal onSaveName={setUserName} /> */}
   <NavBar/>
+    <SmoothScroll>
   <section id="Home">
     <SplineWithLoader username={userName}/>
   </section>
-    {/* <SmoothScroll> */}
 
   {/* <About/> */}
   <section id="About">
@@ -54,7 +54,7 @@ const App = () => {
   <section id="Contact">
     <Contact/>
   </section>
-{/* </SmoothScroll> */}
+</SmoothScroll>
 
 </>
   )

@@ -7,11 +7,11 @@ export const Skills = () => {
     { name: 'HTML', image: 'html-logo.png'},
     { name: 'CSS', image: 'css-logo.png' },
     { name: 'JavaScript', image: 'js-logo.png' },
-    { name: 'Git', image: 'git-logo.png' },
+    { name: 'Git/Github', image: 'git-logo.png' },
     { name: 'SQL', image: 'sql-logo.png' },
-    { name: 'React', image: 'react-logo.png' },
+    { name: 'React.js', image: 'react-logo.png' },
     { name: 'Node.js', image: 'node-logo.png' },
-    { name: 'Express', image: 'express-logo.png' },
+    { name: 'Express.js', image: 'express-logo.png' },
     { name: 'MongoDB', image: 'mongodb-logo.png' },
   ];
 
@@ -30,13 +30,13 @@ export const Skills = () => {
   const skillsToShow = showTechnical ? technicalSkills : softSkills;
 
   return (
-    <section className="p-10 w-full h-[100vh] flex  justify-center border-2">
-        <div className="flex flex-col py-12 align-middle justify-center h-full gap-8">
-            <div className="flex align-middle justify-center">
+    <section className="p-10 w-full flex  justify-center border-2">
+        <div className="flex flex-col py-12 align-middle justify-center w-1/2 gap-8">
+            <div className="flex align-middle justify-center">  
                 <h2 className="text-5xl font-semibold">Skills</h2>
             </div>
 
-            <div className="flex items-center gap-6 text-4xl">
+            <div className="flex items-center gap-6 text-4xl align-middle justify-center">
         <span className="ml-4 text-xl font-medium">Soft Skills</span>
         <button
           onClick={() => setShowTechnical(!showTechnical)}
@@ -49,12 +49,12 @@ export const Skills = () => {
         <span className="ml-4 text-xl font-medium">Technical Skills</span>
             </div>
 
-            <div className="flex align-middle justify-center">
-                <div>
+            <div className="flex align-middle justify-center w-full">
+                <div className='gap-4 w-full h-full justify-center items-center'>
                 {skillsToShow.map(skill => (
-                <div key={skill.name} className="flex items-center">
+                <div key={skill.name} className="flex justify-between gap-40 items-center">
                     <img src={skill.image} alt={skill.name} className="w-8 h-8" />
-                    <span className="text-lg">{skill.name}</span>
+                    <span className="text-lg ">{skill.name}</span>
                 </div>
                 ))}
                 </div>

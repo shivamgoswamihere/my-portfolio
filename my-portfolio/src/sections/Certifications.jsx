@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 export const Certifications = () => (
   <section className="p-10">
