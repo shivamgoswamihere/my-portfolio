@@ -5,8 +5,12 @@ export const Certifications = () => (
   <section className="p-10">
     <h2 className="text-3xl font-semibold mb-6">Certifications</h2>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {[1, 2, 3, 4].map(cert => (
-        <div key={cert} className="border p-4 text-center rounded-lg">Certification {cert}</div>
+      {[{heading:"Accenture Virtual Internship", decription:'', image:''},
+        {heading:"Accenture Virtual Internship", decription:'', image:''},
+        {heading:"Accenture Virtual Internship", decription:'', image:''},
+        {heading:"Accenture Virtual Internship", decription:'', image:''}
+      ].map(cert => (
+        <div key={cert.heading} className="border p-4 text-center rounded-lg">{cert.heading}</div>
       ))}
     </div>
   </section>

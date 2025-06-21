@@ -7,20 +7,37 @@ import { Projects } from './sections/Projects';
 import { Events } from './sections/Events';
 import { Contact } from './sections/Contact';
 import { Skills } from './sections/Skills';
-// import WelcomeModal from './sections/WelcomeModal';
-import SmoothScroll from './components/SmoothScroll';
+import WelcomeModal from './sections/WelcomeModal';
+// import SmoothScroll from '../components/SmoothScroll';
 import SpiralGalaxy from './components/SpiralGalaxy';
 import SplineWithLoader from './components/SplineWithLoader';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProjectsPage from './pages/ProjectsPage';
+import EventsPage from './pages/EventsPage'
 
 
 
-const App = () => {
+const App=()=>{
+  return(
+     <BrowserRouter> 
+      <Routes> 
+        <Route path="/" element={<HomePage />}></Route> 
+        <Route path="/projects" element={<ProjectsPage />}></Route> 
+        <Route path="/events" element={<EventsPage />}></Route> 
+      </Routes> 
+    </BrowserRouter> 
+  )
+}
+
+
+
+const HomePage = () => {
     const [userName, setUserName] = useState("");
   return (
 <>
- {/* <WelcomeModal onSaveName={setUserName} /> */}
+ <WelcomeModal onSaveName={setUserName} />
   <NavBar/>
-    <SmoothScroll>
+    {/* <SmoothScroll> */}
   <section id="Home">
     <SplineWithLoader username={userName}/>
   </section>
@@ -54,10 +71,10 @@ const App = () => {
   <section id="Contact">
     <Contact/>
   </section>
-</SmoothScroll>
+{/* </SmoothScroll> */}
 
 </>
   )
 };
 
-export default App;
+export default HomePage;

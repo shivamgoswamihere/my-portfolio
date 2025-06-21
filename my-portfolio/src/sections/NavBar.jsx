@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import logo from "../assets/SG-logo.png";
-
+import LineSlideButton from "../components/LineSlideButton";
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 mx-4 z-50">
-      <div className="flex justify-between items-center shadow-md backdrop-blur-xl bg-white/5 border border-gray-300 p-4 rounded-b-2xl ">
+      <div className="flex justify-between items-center shadow-md backdrop-blur-xl bg-white/5 border border-t-0 border-gray-500 p-4 rounded-b-2xl ">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <img src={logo} alt="Logo" className="h-9 " />
@@ -62,7 +62,7 @@ export const NavBar = () => {
                   spy={true}
                   activeClass="text-blue-500"
                   onSetActive={() => setIsOpen(false)} // if you want to auto-close menu on click
-                >{item}
+                ><LineSlideButton text={item}/>
                 </Link>
 
                 

@@ -124,7 +124,7 @@ const SpiralGalaxy = ({username}) => {
   
   return (
      
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden ">
   <div id="spiral-galaxy" className="absolute inset-0 z-0"></div>
 
   {/* This content will now be above the spiral effect */}
