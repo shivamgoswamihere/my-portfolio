@@ -8,7 +8,7 @@ export const Events = () => (
         {heading:'WOW', description:'', image: ''},
         {heading:'GDSC Lead', description:'', image: ''}
       ].map(event => (
-        <div key={event} className="border p-4 rounded-lg">
+        <div key={event.heading} className="border p-4 rounded-lg">
           <h3 className="font-bold text-xl mb-2">{event.heading}</h3>
           <p>{event.description}</p>
         </div>

@@ -67,7 +67,7 @@ const SpiralGalaxy = ({username}) => {
       // Draw a simple center dot
       ctx.beginPath();
       ctx.arc(centerX, centerY, 3, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+      ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
       ctx.fill();
       // Update and draw particles
       for (const particle of particles) {

@@ -1,5 +1,4 @@
 import React,{ useEffect, useState } from "react";
-// import { X } from "lucide-react"; // You can use any icon lib
 
 export default function WelcomeModal({ onSaveName }) {
   const [name, setName] = useState("");
@@ -49,7 +48,7 @@ export default function WelcomeModal({ onSaveName }) {
             type="submit"
             className="bg-indigo-500 hover:bg-indigo-600 transition-all rounded-lg py-2 font-medium"
           >
-            Let’s Go!
+            Let's Go!
           </button>
         </form>
       </div>

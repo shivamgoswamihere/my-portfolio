@@ -8,10 +8,10 @@ export const About = () => (
     <div className="flex flex-col md:flex-row items-center gap-48">
       <div className="flex-1 mb-6 md:mb-0 md:mr-10">
         <div className="text-lg mb-4 w-2xs">
-          <p className='text-4xl flex'><p>I'm  Shivam</p>
-            {/* <RotatingText
+          <div className='text-2xl flex gap-3 items-center'>I'm
+            <RotatingText
               texts={['Shivam', 'Developer', 'Community Builder', 'Human!']}
-              mainClassName="px-2 sm:px-2 md:px-4 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg bg-black text-white font-semibold"
+              mainClassName="px-2 sm:px-2 md:px-4 text-black overflow-hidden py-0.5 sm:py-0.5 md:py-1 justify-center rounded-lg bg-black text-2xl"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -20,8 +20,8 @@ export const About = () => (
               splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={2000}
-            />  */}
-          </p>
+            /> 
+          </div>
           A curious dev on a mission to turn coffee into code and bugs into features. I live for clean UI, smooth logic, and that sweet “it finally works” moment. Let's make the web less boring, one line at a time.</div>
           <div className="flex space-x-4">
             {[{icon:"https://phosphoricons.com?q=linkedin&color=d1c7c7&size=52&weight=duotone", account:"Linkedin", link:"https://linkedin.com/shivamgoswami-"},
