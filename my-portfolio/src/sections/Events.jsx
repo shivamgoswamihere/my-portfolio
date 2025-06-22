@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 export const events=[
@@ -31,6 +32,7 @@ export const Events = () => (
         <div key={event.route} className="border p-4 rounded-lg">
           <h3 className="font-bold text-xl mb-2">{event.heading}</h3>
           <p>{event.description}</p>
+          <NavLink to={`events/${event.route}`}>Details</NavLink>
         </div>
       ))}
     </div>

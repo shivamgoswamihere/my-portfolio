@@ -1,16 +1,21 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from '../sections/Projects.jsx';
+import { events } from '../sections/Events.jsx';
 import Aurora from '../components/Aurora.jsx'
 
-const ProjectsPage = () => {
+const DetailsPage = () => {
   const { slug } = useParams();
 
-  const project = projects.find((p) => p.route === slug);
+  
+  let detail = projects.find((p) => p.route === slug);
 
-  if (!project) {
-    return <div className="text-center p-10 text-red-500">Project not found!</div>;
+  if (!detail){
+      detail = events.find((p) => p.route === slug);
   }
+  // if (project) {
+    
+  // }
 
   return (<>
   <div className='flex flex-col items-center justify-center h-100vh bg-gradient-to-r from-blue-200 to-purple-200'>
@@ -27,8 +32,8 @@ const ProjectsPage = () => {
     {/* glass-wrapper */}
       <div className="w-8/10 h-[80vh]  mb-20 text-gray-950 .backdrop-blur-xl bg-white/25 rounded-xl border border-white/10 p-8">
     <section className="p-5">
-      <h2 className="text-2xl font-bold mb-4">{project.heading}</h2>
-      <p className="text-lg">{project.description}</p>
+      <h2 className="text-2xl font-bold mb-4">{detail.heading}</h2>
+      <p className="text-lg">{detail.description}</p>
     </section>
     </div>
     </div>
@@ -36,6 +41,6 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default DetailsPage;
 
 
