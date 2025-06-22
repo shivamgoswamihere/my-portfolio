@@ -13,7 +13,6 @@ import SpiralGalaxy from './components/SpiralGalaxy';
 import SplineWithLoader from './components/SplineWithLoader';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProjectsPage from './pages/ProjectsPage';
-import EventsPage from './pages/EventsPage'
 import ErrorPage from './pages/ErrorPage';
 
 
@@ -72,8 +71,7 @@ const App=()=>{
      <BrowserRouter> 
       <Routes> 
         <Route path="/" element={<HomePage />}></Route> 
-        <Route path="/projects/route" element={<ProjectsPage />}></Route> 
-        <Route path="/events" element={<EventsPage />}></Route> 
+        <Route path="/projects/route" element={<ProjectsPage />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes> 
     </BrowserRouter> 
