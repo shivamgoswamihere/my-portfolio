@@ -7,7 +7,7 @@ export const NavBar = () => {
 
   return (
     <nav className="sticky top-0 mx-4 z-50">
-      <div className="flex justify-between items-center shadow-md backdrop-blur-xl bg-white/5 border border-t-0 border-gray-500 p-4 rounded-b-2xl ">
+      <div className="flex justify-between items-center shadow-md backdrop-blur-xl bg-white/5 border border-t-0 border-gray-500 p-2 rounded-b-2xl ">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <img src={logo} alt="Logo" className="h-9 " />

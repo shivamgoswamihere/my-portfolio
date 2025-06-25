@@ -62,7 +62,7 @@ export const Skills = () => {
               <h2 className="text-3xl font-semibold">Skills</h2>
           </div>
 
-          <div className="flex items-center gap-6 text-2xl align-middle justify-center">
+          <div className=" flex flex-col md:flex-row md:items-center md:text-2xl md:align-middle md:justify-center">
             <span className="ml-4 text-xl font-medium">Technical</span>
 
             <ToggleButton onClick={() => setShowTechnical(!showTechnical)}/>
@@ -70,8 +70,8 @@ export const Skills = () => {
             <span className="ml-3 text-2xl font-medium">Managerial</span>
           </div>
 
-          <div className="flex align-middle justify-center w-full">
-            <div className='gap-4  h-full justify-center items-center  w-5/10'>
+          <div className="flex flex-col md:flex-row align-middle justify-center w-full">
+            <div className=' h-full self-center justify-center  items-center  w-5/10'>
             <span className='text-xl font-bold'>T o o l s</span>
 
             {skillsToShow.tools.map(skill => (
@@ -83,9 +83,10 @@ export const Skills = () => {
                 ))}
 
             </div>
-            <div className='gap-4 w-1/3 h-full justify-center items-center'>
 
-              <span className='text-xl font-bold'>S k i l l s</span>
+            <div className=' w-1/3 h-full self-center justify-center items-center'>
+
+              <span className='text-xl font-bold'>Skills</span>
               {skillsToShow.skills.map(skill => (
               
               <div key={skill.name} className="flex justify-between items-center my-5 w-full">

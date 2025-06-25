@@ -128,8 +128,7 @@ const SpiralGalaxy = ({username}) => {
   <div id="spiral-galaxy" className="absolute inset-0 z-0"></div>
 
   {/* This content will now be above the spiral effect */}
-  <div className="relative z-10 flex flex-col items-center justify-center h-full">
-    <h1 className="text-white text-4xl font-bold">Hello {username?username:'World'}!</h1>
+  <div className="relative z-10 flex flex-col items-center justify-center h-[100vh]">
     <About />
   </div>
 </div>

@@ -13,7 +13,7 @@ export default function SplineWithLoader({username}) {
   const [isLoaded, setIsLoaded] = useState(false);
   let message = "Hello," + (username ? username : 'World!')
   return (
-     <section className="relative w-full h-[130vh] overflow-hidden">
+     <section className="relative w-full h-[125vh] overflow-hidden">
       {/* Spline Background */}
       <div className="absolute inset-0 z-0 -translate-y-30 ">
         {!isLoaded && <LoadingSpinner />}
@@ -25,8 +25,8 @@ export default function SplineWithLoader({username}) {
       </div>
 
       {/* Content Over Spline */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-[10%] text-white text-center px-4">
-        <h1 className=" font-bold drop-shadow-lg">
+      <div className="relative z-10 flex flex-col items-center justify-center h-[10%] text-white text-center">
+        <h1 className=" font-bold drop-shadow-md">
             <SplitText
   text={message}
   className="text-2xl font-semibold text-center"
