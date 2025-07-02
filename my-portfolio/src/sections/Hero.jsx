@@ -11,7 +11,7 @@ export const Hero = () => (
     <p className="text-lg mb-6 max-w-2xl">
       I craft clean, responsive web apps and love sharing what I learn. Always exploring new tech, building in public, and growing with the dev community.
     </p>
-    <div className="flex justify-center"><RainbowFillButton text="Explore My Work" /></div>
+    <div className="flex justify-center"><RainbowFillButton text="Get In Touch" /></div>
         </div>
         </div>
 );

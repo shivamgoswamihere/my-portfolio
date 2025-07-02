@@ -1,13 +1,19 @@
-import clublogo from '../assets/GDSC/clublogo'
-import gdscgraduation from '../assets/GDSC/gdscgraduation'
-import graduationmail from '../assets/GDSC/graduationmail'
-import collab from '../assets/GDSC/collab'
+import clublogo from '../assets/events/GDSC/clublogo.png'
+import gdscgraduation from '../assets/events/GDSC/gdscgraduation.png'
+import graduationcertificate from '../assets/events/GDSC/graduationcertificate.jpg'
 
-import organisermail from '../assets/WOW/organisermail'
-import shivamstage from '../assets/WOW/shivamstage'
-import wowclip from '../assets/WOW/wowclip'
+import organisermail from '../assets/events/WOW/organisermail.png'
+import shivamstage from '../assets/events/WOW/shivamstage.jpeg'
+import wowstage from '../assets/events/WOW/wowstage.jpg'
+
+import web3screen from '../assets/events/web-3/web3screen.JPG'
+import web3me from '../assets/events/web-3/web3me.JPG'
+import web3team from '../assets/events/web-3/web3team.JPG'
+
+
 
 export default{
-    gdsc: [clublogo, gdscgraduation, graduationmail, collab],
-    wow: [organisermail, shivamstage, wowclip]
+    gdsc: [clublogo, gdscgraduation, graduationcertificate],
+    wow: [shivamstage, wowstage,organisermail],
+    web3:[web3screen, web3me, web3team]
 }

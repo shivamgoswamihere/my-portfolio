@@ -32,25 +32,24 @@ export const Skills = () => {
   ]}
 
   const soft ={ skills: [
-    { name: 'Team Management', image: 'team-logo.png' },
-    { name: 'Leadership', image: 'leadership-logo.png' },
-    { name: 'Community Management', image: 'event-logo.png' },
-    { name: 'Public Speaking', image: 'mic-logo.png' },
-    { name: 'Event Planning', image: 'event-logo.png' },
-    { name: 'Problem Solving', image: 'problem-solving-logo.png' },
-    { name: 'Communication', image: 'communication-logo.png' },
+    { name: 'Team Management', image: '' },
+    { name: 'Leadership', image: '' },
+    { name: 'Community Management', image: '' },
+    { name: 'Public Speaking', image: '' },
+    { name: 'Event Planning', image: '' },
+    { name: 'Problem Solving', image: 'problem-' },
+    { name: 'Time Management', image: '' },
+    { name: 'Communication', image: '' },
     {name:'Adaptability', image: ''},
-    { name: 'Collaboration', image: 'collaboration-logo.png' }
+    { name: 'Collaboration', image: '' }
   ],
   tools:[
-    {name:'VS', image: Icons.vscode},
-    {name:'Fima', image: Icons.figma},
-    {name:'Get', image: Icons.git},
-    {name:'Mongoe', image: Icons.mongoose},
-    {name:'NPM', image: Icons.npm},
-    {name:'OpAI', image: Icons.openai},
-    {name:'Post', image: Icons.postman},
-    {name:'Sack', image: Icons.slack},
+    {name:'Figma', image: Icons.figma},
+    {name:'OpenAI', image: Icons.openai},
+    {name:'Slack', image: Icons.slack},
+    {name:'Canva', image: Icons.canva},
+    {name:'Notion', image: Icons.notion},
+    {name:'Gemini', image: Icons.gemini}
   ]}
 
   const skillsToShow = showTechnical ?  technical : soft ;
@@ -72,7 +71,7 @@ export const Skills = () => {
 
           <div className="flex flex-col md:flex-row align-middle justify-center w-full">
             <div className=' h-full self-center justify-center  items-center  w-5/10'>
-            <span className='text-xl font-bold'>T o o l s</span>
+            <span className='text-xl font-bold'>Tools</span>
 
             {skillsToShow.tools.map(skill => (
               <div key={skill.name} className="flex justify-between items-center my-5 w-full">
@@ -90,7 +89,7 @@ export const Skills = () => {
               {skillsToShow.skills.map(skill => (
               
               <div key={skill.name} className="flex justify-between items-center my-5 w-full">
-                  <div className="text-lg flex gap-2 justify-self-start justify-start justify-items-start w-full"><img src={skill.image} alt={skill.name} className="w-8 h-8" /> {skill.name}
+                  <div className="text-lg flex gap-2 justify-self-start justify-start justify-items-start w-full h-8">{showTechnical && <img src={skill.image} alt={skill.name} className="w-8 h-full" />} {skill.name}
                   </div>
                   </div>
                    
@@ -104,20 +103,4 @@ export const Skills = () => {
     </section>
   );
 };
-                  {/* {skillsToShow.tools.map(skill => (
-                  <div key={skill.name} className="flex justify-between items-center my-5 w-full">
-                    
-                    <div className="text-lg flex gap-3 w-2/3"><img src={skill.image} alt={skill.name} className="w-8 h-8" /> {skill.name}
-                    </div>
-                  </div>
-                ))}
-
-                <div className='gap-4 w-full h-full justify-center items-center'>
-                {skillsToShow.skills.map(skill => (
                   
-                  <div key={skill.name} className="flex justify-between items-center my-5 w-full">
-                  <div className="text-lg flex gap-3 justify-self-start justify-start justify-items-start w-1/3"><img src={skill.image} alt={skill.name} className="w-8 h-8" /> {skill.name}
-                  </div>
-                  </div>
-                   
-                ))} */}

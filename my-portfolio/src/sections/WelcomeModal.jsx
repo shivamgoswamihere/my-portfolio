@@ -42,7 +42,7 @@ export default function WelcomeModal({ onSaveName }) {
             placeholder="Enter your name..."
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="p-3 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <button
             type="submit"

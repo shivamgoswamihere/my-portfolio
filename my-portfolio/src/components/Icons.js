@@ -19,6 +19,10 @@ import slack from '../assets/ui-icons/slack.svg'
 import tailwindcss from '../assets/ui-icons/tailwindcss.svg'
 import vitejs from '../assets/ui-icons/vitejs.svg'
 import vscode from '../assets/ui-icons/vscode.svg'
+import canva from '../assets/ui-icons/canva.svg'
+import gemini from '../assets/ui-icons/gemini.svg'
+import notion from '../assets/ui-icons/notion.png'
+
 
 
 export default {
@@ -43,4 +47,7 @@ export default {
 'tailwindcss':tailwindcss,
 'vitejs':vitejs,
 'vscode':vscode,
+'canva':canva,
+'gemini':gemini,
+'notion':notion
 }
