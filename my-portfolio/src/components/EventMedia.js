@@ -7,7 +7,7 @@ import shivamstage from '../assets/events/WOW/shivamstage.jpeg'
 import wowstage from '../assets/events/WOW/wowstage.jpg'
 
 import web3screen from '../assets/events/web-3/web3screen.JPG'
-import web3me from '../assets/events/web-3/web3me.JPG'
+import web3me from '../assets/events/web-3/web3me.jpg'
 import web3team from '../assets/events/web-3/web3team.JPG'
 
 
