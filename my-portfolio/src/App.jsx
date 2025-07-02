@@ -24,7 +24,7 @@ const HomePage = () => {
     const [userName, setUserName] = useState("");
   return (
 <>
- <WelcomeModal onSaveName={setUserName} />
+ {/* <WelcomeModal onSaveName={setUserName} /> */}
   <NavBar/>
     {/* <SmoothScroll> */}
   <section id="Home">
