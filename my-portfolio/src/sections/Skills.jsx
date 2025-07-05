@@ -21,13 +21,12 @@ export const Skills = () => {
   tools:[
     {name:'VS Code', image: Icons.vscode},
     { name: 'Github', image: Icons.github },
-    {name:'Figma', image: Icons.figma},
     {name:'Git', image: Icons.git},
     {name:'Mongoose', image: Icons.mongoose},
     {name:'NPM', image: Icons.npm},
+    {name:'Figma', image: Icons.figma},
     {name:'Open AI', image: Icons.openai},
     {name:'Postman', image: Icons.postman},
-    {name:'Slack', image: Icons.slack},
     
   ]}
 
@@ -44,12 +43,12 @@ export const Skills = () => {
     { name: 'Collaboration', image: '' }
   ],
   tools:[
-    {name:'Figma', image: Icons.figma},
     {name:'OpenAI', image: Icons.openai},
     {name:'Slack', image: Icons.slack},
     {name:'Canva', image: Icons.canva},
     {name:'Notion', image: Icons.notion},
-    {name:'Gemini', image: Icons.gemini}
+    {name:'Gemini', image: Icons.gemini},
+    {name:'Figma', image: Icons.figma}
   ]}
 
   const skillsToShow = showTechnical ?  technical : soft ;

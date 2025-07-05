@@ -48,7 +48,7 @@ export const NavBar = () => {
             isOpen ? "flex" : "hidden"
           }`}
         >
-          {["Home", "About", "Projects", "Education" ,"Skills", "Events", "Certifications", "Contact"].map(
+          {["Home", "About", "Projects", "Mission" ,"Skills", "Events", "Certifications", "Contact"].map(
             (item) => (
               <li
                 key={item}

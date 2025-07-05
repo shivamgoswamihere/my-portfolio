@@ -8,12 +8,12 @@ import { Events } from './sections/Events';
 import { Contact } from './sections/Contact';
 import { Skills } from './sections/Skills';
 import WelcomeModal from './sections/WelcomeModal';
-// import SmoothScroll from '../components/SmoothScroll';
 import SpiralGalaxy from './components/SpiralGalaxy';
 import SplineWithLoader from './components/SplineWithLoader';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DetailsPage from './pages/DetailsPage';
 import ErrorPage from './pages/ErrorPage';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -26,7 +26,7 @@ const HomePage = () => {
 <>
  {/* <WelcomeModal onSaveName={setUserName} /> */}
   <NavBar/>
-    {/* <SmoothScroll> */}
+
   <section id="Home">
     <SplineWithLoader username={userName}/>
   </section>
@@ -39,7 +39,7 @@ const HomePage = () => {
     <Projects/>
   </section>
   
-  <section id="Education">
+  <section id="Mission">
     <Hero/>
   </section>
   
@@ -59,7 +59,6 @@ const HomePage = () => {
   <section id="Contact">
     <Contact/>
   </section>
-{/* </SmoothScroll> */}
 
 </>
   )
@@ -69,6 +68,7 @@ const App=()=>{
   
   return(
      <BrowserRouter> 
+     <ScrollToTop />
       <Routes> 
         <Route path="/" element={<HomePage />}></Route> 
         <Route path="/projects/:slug" element={<DetailsPage />}></Route>
